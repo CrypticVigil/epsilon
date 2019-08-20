@@ -1,0 +1,17 @@
+/*
+Theme Name: Epsilon
+Theme URI: https://wordpress.org
+Author: Chad Barrows
+Author URI: https://chadbarrows.com
+Description: A theme I made to mess around with while I learn WordPress.
+Version: 0.0.1
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: epsilon
+Tags: blog
+*/
+
+html {
+  font-family: Helvetica, Arial, sans-serif;
+  background-color: red;
+}
