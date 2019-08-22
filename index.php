@@ -14,10 +14,14 @@
 	</div>
 	<div>
 		<?php the_excerpt() ?>
-		<a href="<?php the_permalink() ?>" title="<?php the_title_attribute() ?>">Read More</a>
+		<a href="<?php the_permalink() ?>" title="<?php the_title_attribute() ?>">
+			Read More <span class="u-screen-reader-text">About <?php the_title() ?></span>
+		</a>
 	</div>
 <?php endwhile; else : ?>
 	<p><?php esc_html_e( "Sorry, no posts matched your criteria." ); ?></p>
 <?php endif; ?>
+
+<?php the_posts_pagination() ?>
 
 <?php get_footer(); ?>
