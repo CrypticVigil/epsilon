@@ -1,27 +1,17 @@
 const gulp = require('gulp');
 const sass = require('gulp-sass');
-const browserSync = require('browser-sync').create();
+const prefix = require('gulp-autoprefixer');
+const clean = require('gulp-clean-css');
 
-gulp.task('sass', () =>
+gulp.task('process', () =>
   gulp
     .src('scss/*.scss')
     .pipe(sass())
+    .pipe(prefix())
+    .pipe(clean())
     .pipe(gulp.dest('css'))
-    .pipe(browserSync.stream())
 );
 
-gulp.task(
-  'serve',
-  gulp.series('sass', () => {
-    browserSync.init({
-      server: {
-        baseDir: './',
-      },
-    });
+gulp.task('watch', () => gulp.watch('scss/*.scss', gulp.series('process')));
 
-    gulp.watch('scss/*.scss', gulp.series('sass'));
-    gulp.watch('*.html').on('change', browserSync.reload);
-  })
-);
-
-gulp.task('default', gulp.series('serve'));
+gulp.task('default', gulp.series('watch'));
