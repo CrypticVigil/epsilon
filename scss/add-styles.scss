@@ -1,6 +1,90 @@
 @import "normalize.css";
+@import "wordpress.css";
+
+$coral: #ff8066;
+$coral-pale: #ffc0b3;
+$warm-gray: #9f8079;
+$gray-text: #606060;
+$turtle-green: #828c5a;
+
+* {
+  box-sizing: border-box;
+}
 
 html {
-  font-family: Helvetica, Arial, sans-serif;
-  background-color: lightcyan;
+  font-family: "Nunito", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  color: $gray-text;
 }
+
+a {
+  text-decoration: none;
+  color: $coral;
+}
+
+body h2:first-of-type {
+  margin-top: 0;
+}
+
+// ------------------------------ //
+// Mobile Styles
+
+@media screen and (max-width: 600px) {
+  #desktop-nav {
+    display: none;
+  }
+
+  .mobile-menu--hidden {
+    display: none;
+  }
+
+  .navbar {
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid gainsboro;
+  }
+
+  .navbar__logo {
+    height: 60px;
+    padding: 5px 16px;
+  }
+
+  #mobile-menu__hamburger {
+    height: 60px;
+    width: 60px;
+    padding: 10px;
+    fill: silver;
+  }
+
+  #mobile-nav {
+    border-bottom: 2px solid gainsboro;
+    padding: 10px 1rem;
+  }
+
+  #mobile-nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #mobile-nav li {
+    height: 40px;
+  }
+
+  #mobile-nav a {
+    line-height: 40px;
+    display: block;
+    width: 100%;
+    font-size: 1.25rem;
+  }
+
+  .container {
+    padding: 15px;
+  }
+}
+
+// Desktop Styles
+@import "desktop";

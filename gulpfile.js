@@ -6,7 +6,7 @@ const browserSync = require('browser-sync').create();
 
 gulp.task('styles', () =>
   gulp
-    .src('scss/*.scss')
+    .src('scss/add-styles.scss')
     .pipe(sass())
     .pipe(prefix())
     .pipe(clean())
