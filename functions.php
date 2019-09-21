@@ -1,15 +1,19 @@
 <?php
 
 function epsilon_assets() {
-
 	wp_enqueue_style( 'epsilon-css', get_template_directory_uri() . '/css/add-styles.css' );
-
 	wp_enqueue_script( 'epsilon-scripts', get_template_directory_uri() . '/js/scripts.js' );
-
 }
 
 add_action( 'wp_enqueue_scripts', 'epsilon_assets' );
-add_theme_support( 'title-tag' );
+
+function epsilon_theme_support() {
+	add_theme_support( 'title-tag' );
+	add_theme_support( 'post-thumbnails' );
+	add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption' ) );
+}
+
+add_action( 'after_setup_theme', 'epsilon_theme_support');
 
 function epsilon_sidebar_widgets() {
 	register_sidebar( array(
@@ -38,5 +42,11 @@ function epsilon_footer_widgets() {
 }
 
 add_action('widgets_init', 'epsilon_footer_widgets');
+
+function epsilon_register_menus() {
+	register_nav_menus( array('header-nav' => esc_html__('Header Navigation', "epsilon") ) );
+}
+
+add_action( 'init', 'epsilon_register_menus' );
 
 ?>
