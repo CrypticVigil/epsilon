@@ -1,11 +1,13 @@
 <?php get_header(); ?>
 
-<div class="jumbotron"></div>
-
 <div class="container">
 	
 	<main>
+		<?php the_archive_title( '<h1>', '</h1>'); ?>
+		<?php the_archive_description( '<div class="archive-description" >', '</div>' ); ?>
+
 		<?php get_template_part( 'loop' ); ?>
+
 	</main>
 
 	<div class="sidebar">

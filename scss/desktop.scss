@@ -1,13 +1,14 @@
 @media screen and (min-width: 1000px) {
   .navbar {
-    height: 80px;
+    height: 72px;
     width: 960px;
     margin: auto;
     display: flex;
+    justify-content: space-between;
   }
 
   .navbar__logo {
-    height: 80px;
+    height: 72px;
     padding: 5px 0;
   }
 
@@ -18,7 +19,7 @@
 
   .desktop-nav__menu li {
     display: inline;
-    line-height: 80px;
+    line-height: 72px;
   }
 
   a.mobile-menu__link {
@@ -27,6 +28,12 @@
 
   #mobile-nav {
     display: none;
+  }
+
+  .jumbotron {
+    width: 100%;
+    height: 400px;
+    background-color: gainsboro;
   }
 
   .container {
@@ -40,7 +47,19 @@
   }
 
   main {
-    width: calc(75% - 1rem);
+    width: calc(75% - 2rem);
+  }
+
+  h1 {
+    border-bottom: 2px solid $green;
+    padding-bottom: 5px;
+    margin-bottom: 2rem;
+  }
+
+  .archive-description p {
+    margin-top: -1.5rem;
+    font-style: italic;
+    margin-bottom: 2rem;
   }
 
   .post {
@@ -80,6 +99,61 @@
 
   .sidebar {
     width: 25%;
-    margin-left: 1rem;
+    margin-left: 2rem;
+
+    section {
+      margin-bottom: 1.5rem;
+    }
+
+    h3 {
+      margin-bottom: 0.5rem;
+    }
+
+    select {
+      width: 100%;
+    }
+
+    ul {
+      list-style-type: none;
+      padding-left: 1rem;
+      border-left: 2px solid gainsboro;
+      margin-top: 0;
+    }
+  }
+
+  footer {
+    width: 100%;
+    background-color: $green;
+    color: white;
+    padding: 1rem 0;
+    margin-top: 1rem;
+  }
+
+  .footer-container {
+    width: 960px;
+    margin: auto;
+    display: flex;
+  }
+
+  .footer-widget {
+    flex-basis: 25%;
+    ul {
+      list-style-type: none;
+      padding-left: 1rem;
+      border-left: 2px solid white;
+    }
+    a {
+      color: white;
+    }
+  }
+
+  .footer-info {
+    width: 960px;
+    margin: auto;
+    p {
+      text-align: center;
+      line-height: 2rem;
+      margin: 0;
+    }
   }
 }

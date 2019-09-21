@@ -5,7 +5,7 @@ $coral: #ff8066;
 $coral-pale: #ffc0b3;
 $warm-gray: #9f8079;
 $gray-text: #606060;
-$turtle-green: #828c5a;
+$green: #73bf8c;
 
 * {
   box-sizing: border-box;
@@ -22,12 +22,12 @@ a {
   color: $coral;
 }
 
-body h2:first-of-type {
-  margin-top: 0;
-}
-
 .screen-reader-text {
   display: none;
+}
+
+.sidebar h3 {
+  color: $green;
 }
 
 // ------------------------------ //

@@ -3,8 +3,8 @@
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 144 28.8" style="enable-background:new 0 0 144 28.8;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:#828C5A;}
-	.st1{fill:#FF8066;}
+	.st0{fill:#73bf8c;} <!-- green -->
+	.st1{fill:#FF8066;} <!-- coral -->
 </style>
 <g>
 	<path class="st0" d="M5.84,18.5C5.95,18.61,6,18.76,6,18.95c0,0.23-0.09,0.4-0.26,0.52c-0.18,0.12-0.43,0.17-0.77,0.14l-0.46-0.03
