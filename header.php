@@ -25,7 +25,6 @@
 				'container'				=> 'nav',
 				'container_class'	=> 'desktop-nav__menu',
 				'menu_class'		 	=> 'desktop-nav__menu-ul',
-				// 'depth'						=> '1'
 			) ); ?>
 		</div>
 

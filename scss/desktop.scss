@@ -18,13 +18,45 @@
   }
 
   .desktop-nav__menu li {
-    display: inline;
+    display: inline-block;
     line-height: 60px;
     margin-left: 1rem;
     a:hover {
       text-decoration: underline;
       color: $warm-gray;
     }
+  }
+
+  ul.sub-menu {
+    display: none;
+    position: absolute;
+    padding: 0;
+    background-color: white;
+    border-left: 4px solid $green;
+    line-height: 40px;
+    li {
+      line-height: 40px;
+      margin-left: 0;
+      width: 100%;
+      display: flex;
+    }
+    a {
+      display: inline-block;
+      padding: 0 1rem 0 0.5rem;
+      width: 100%;
+    }
+    a:hover {
+      background-color: #f0f0f0;
+      text-decoration: none;
+    }
+  }
+
+  .sub-menu--open ul {
+    display: block;
+  }
+
+  .red {
+    background-color: red;
   }
 
   a.mobile-menu__link {
