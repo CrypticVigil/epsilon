@@ -19,12 +19,19 @@
 
   .desktop-nav__menu li {
     display: inline-block;
-    line-height: 60px;
     margin-left: 1rem;
+    a {
+      display: block;
+      line-height: 60px;
+    }
     a:hover {
-      text-decoration: underline;
       color: $warm-gray;
     }
+  }
+
+  .down-arrow {
+    font-size: 1rem;
+    padding-left: 4px;
   }
 
   ul.sub-menu {
@@ -34,19 +41,25 @@
     background-color: white;
     border-left: 4px solid $green;
     line-height: 40px;
+    border: 1px solid gainsboro;
+    border-bottom: none;
     li {
       line-height: 40px;
       margin-left: 0;
       width: 100%;
       display: flex;
+      border-bottom: 1px solid gainsboro;
     }
     a {
       display: inline-block;
-      padding: 0 1rem 0 0.5rem;
+      padding: 0 1rem 0 0.75rem;
       width: 100%;
+      line-height: 40px;
+      color: $gray-text;
     }
     a:hover {
       background-color: #f0f0f0;
+      color: $coral;
       text-decoration: none;
     }
   }
@@ -206,10 +219,15 @@
 
   .footer-widget {
     flex-basis: 25%;
+    padding-right: 2rem;
     ul {
       list-style-type: none;
       padding-left: 1rem;
       border-left: 2px solid white;
+      // line-height: 1.25rem;
+    }
+    li {
+      margin-bottom: 0.25rem;
     }
     a {
       color: white;

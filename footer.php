@@ -1,11 +1,13 @@
 <footer>
 
+<?php $footer_text = get_theme_mod( 'epsilon_footer_text', '' ) ?>
+
 	<div class="footer-container">
 		<?php dynamic_sidebar( 'footer-sidebar' ) ?>
 	</div>
 
 	<div class="footer-info">
-		<p>Custom WordPress theme created by Chad Barrows. &copy;2019</p>
+		<p><?php echo esc_html__( $footer_text, 'epsilon' ) ?> &copy; <?php echo date('Y') ?></p>
 	</div>
 
 </footer>

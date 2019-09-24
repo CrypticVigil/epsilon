@@ -49,4 +49,19 @@ function epsilon_register_menus() {
 
 add_action( 'init', 'epsilon_register_menus' );
 
+function epsilon_dropdown_icon($title, $item, $args, $depth) {
+	if($args->theme_location == 'header-nav') {
+		if(in_array('menu-item-has-children', $item->classes)) {
+			if($depth == 0) {
+				$title .= '<span class="down-arrow" aria-hidden="true" >&#9662;</span>';
+			}
+		}
+	}
+	return $title;
+}
+
+add_filter( 'nav_menu_item_title', 'epsilon_dropdown_icon', 10, 4 );
+
+require_once('php/customize.php');
+
 ?>
