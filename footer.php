@@ -1,4 +1,4 @@
-<footer>
+<footer class="page-footer">
 
 <?php $footer_text = get_theme_mod( 'epsilon_footer_text', '' ) ?>
 

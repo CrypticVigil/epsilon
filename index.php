@@ -1,6 +1,8 @@
 <?php get_header(); ?>
 
-<div class="jumbotron"></div>
+<div class="jumbotron">
+	<img src="<?php echo get_bloginfo( 'template_directory' ); ?>/img/jumbotron-flower-lg.jpg" alt="A flower on a fuzzy green background">
+</div>
 
 <div class="container">
 	

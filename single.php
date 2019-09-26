@@ -1,16 +1,19 @@
 <?php get_header(); ?>
 
-<div class="jumbotron"></div>
-
 <div class="container">
 	
 	<main>
 		<!-- This code checks if there are any posts and displays them -->
 		<?php if( have_posts() ) : while( have_posts() ) : the_post(); ?>
 			<article <?php post_class() ?>>
-				<h2>
-					<a href="<?php the_permalink() ?>" title="<?php the_title_attribute() ?>"><?php the_title() ?></a>
-				</h2>
+
+				<?php if( get_the_post_thumbnail() !== '' ) { ?>
+					<div class="post-thumbnail">
+						<?php the_post_thumbnail( 'large' ) ?>
+					</div>
+				<?php } ?>
+
+				<h1 class="single-post-h1"><?php the_title() ?></h1>
 				<div>
 					Posted on <a href="<?php the_permalink() ?>">
 						<time datetime="<?php echo get_the_date('c') ?>"><?php echo get_the_date() ?></time></a>
@@ -18,8 +21,13 @@
 						<?php echo get_the_author() ?>
 					</a>
 				</div>
-				<div>
+				<div class="single-post">
 					<?php the_content() ?>
+				</div>
+				<div class="single-post__meta">
+					<?php if(has_category()) { ?>
+						<span>Categories: <?php echo get_the_category_list( ', ' );?></span>
+					<?php } ?>
 				</div>
 			</article>
 			

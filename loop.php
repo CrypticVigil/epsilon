@@ -1,6 +1,12 @@
 <!-- This code checks if there are any posts and displays them -->
 <?php if( have_posts() ) : while( have_posts() ) : the_post(); ?>
 	<article <?php post_class() ?>>
+
+		<?php if( get_the_post_thumbnail() !== '' ) { ?>
+			<div class="post-thumbnail">
+				<?php the_post_thumbnail( 'large' ) ?>
+			</div>
+		<?php } ?>
 		<h2>
 			<a href="<?php the_permalink() ?>" title="<?php the_title_attribute() ?>"><?php the_title() ?></a>
 		</h2>
