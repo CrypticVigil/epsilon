@@ -28,8 +28,13 @@
 					<?php if(has_category()) { ?>
 						<span>Categories: <?php echo get_the_category_list( ', ' );?></span>
 					<?php } ?>
+					<?php if(has_tag()) { ?>
+						<div class="post-tags"><?php echo get_the_tag_list( '<ul><li>', '</li><li>', '</li></ul>' ); ?></div>
+					<?php } ?>
 				</div>
 			</article>
+
+			<?php get_template_part( 'php/posts-nav' ); ?>
 			
 		<?php endwhile; else : ?>
 			<p><?php esc_html_e( "Sorry, no posts matched your criteria." ); ?></p>

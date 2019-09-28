@@ -151,6 +151,40 @@
     padding-top: 0.75rem;
   }
 
+  .post-tags {
+    display: block;
+    width: 100%;
+  }
+
+  .post-tags ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 1rem;
+    line-height: 2.25rem;
+    overflow: auto;
+    li {
+      display: inline;
+      background-color: #f0f0f0;
+      border: 1px solid gainsboro;
+      padding: 4px 8px;
+      margin-right: 0.5rem;
+      border-radius: 8px;
+    }
+  }
+
+  .post-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    h3 {
+      margin: 0.5rem 0;
+    }
+  }
+
+  .post-navigation__next {
+    text-align: right;
+  }
+
   blockquote {
     border-left: 2px solid gainsboro;
     margin-left: 0;
