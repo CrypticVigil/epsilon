@@ -22,7 +22,10 @@
 					</a>
 				</div>
 				<div class="single-post">
-					<?php the_content() ?>
+					<?php 
+						the_content();
+						wp_link_pages();
+					?>
 				</div>
 				<div class="single-post__meta">
 					<?php if(has_category()) { ?>
@@ -35,6 +38,10 @@
 			</article>
 
 			<?php get_template_part( 'php/posts-nav' ); ?>
+
+			<?php if( comments_open() || get_comments_number() ) {
+				comments_template(); 
+			} ?>
 			
 		<?php endwhile; else : ?>
 			<p><?php esc_html_e( "Sorry, no posts matched your criteria." ); ?></p>

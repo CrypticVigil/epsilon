@@ -12,6 +12,8 @@
 				<?php echo esc_html( get_the_title( $prev->ID ) ); ?>
 				</a>
 			</div>
+		<?php } else { ?>
+			<div class='post-navigation__prev'></div>
 		<?php } ?>
 		<?php if($next) { ?>
 			<div class='post-navigation__next'>

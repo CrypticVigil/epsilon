@@ -65,7 +65,7 @@
       color: $gray-text;
     }
     a:hover {
-      background-color: #f0f0f0;
+      background-color: $pale-gray;
       color: $coral;
       text-decoration: none;
     }
@@ -110,15 +110,34 @@
     width: calc(75% - 2rem);
     h2 {
       margin: 1rem 0;
+      word-wrap: break-word;
     }
     img {
       max-width: 100%;
       height: auto;
     }
+    table {
+      border-collapse: collapse;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    tr {
+      border-bottom: 1px solid gainsboro;
+    }
+    tr:first-of-type {
+      border-top: 1px solid gainsboro;
+    }
+    tr:nth-child(even) {
+      background-color: $pale-gray;
+    }
+    td {
+      padding: 6px 8px;
+    }
   }
 
   .single-post-h1 {
     margin-bottom: 0.5rem;
+    word-wrap: break-word;
   }
 
   .archive-h1 {
@@ -164,7 +183,7 @@
     overflow: auto;
     li {
       display: inline;
-      background-color: #f0f0f0;
+      background-color: $pale-gray;
       border: 1px solid gainsboro;
       padding: 4px 8px;
       margin-right: 0.5rem;
@@ -179,10 +198,61 @@
     h3 {
       margin: 0.5rem 0;
     }
+    a {
+      word-wrap: break-word;
+    }
+    div {
+      width: 50%;
+    }
   }
 
   .post-navigation__next {
     text-align: right;
+  }
+
+  .comments {
+    margin-top: 1rem;
+    border-top: 2px solid gainsboro;
+    li {
+      list-style-type: none;
+      padding-left: 1rem;
+    }
+  }
+
+  .children {
+    padding-left: 0;
+  }
+
+  .depth-2,
+  .depth-3,
+  .depth-4,
+  .depth-5,
+  .depth-6 {
+    border-left: 1px solid gainsboro;
+    padding-left: 1rem;
+  }
+
+  .comment-author {
+    display: flex;
+    margin: 0.5rem 0;
+    b {
+      line-height: 40px;
+      margin-left: 1rem;
+    }
+    .says {
+      line-height: 40px;
+      padding-left: 4px;
+    }
+    img {
+      border-radius: 50%;
+    }
+  }
+
+  .comments-list {
+    padding-left: 0;
+    article {
+      margin-bottom: 1rem;
+    }
   }
 
   blockquote {
