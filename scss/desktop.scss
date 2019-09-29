@@ -152,6 +152,12 @@
     margin-bottom: 2rem;
   }
 
+  .search-results {
+    border-bottom: 2px solid $green;
+    padding-bottom: 5px;
+    margin-bottom: 2rem;
+  }
+
   .post {
     padding-bottom: 1rem;
     border-bottom: 2px solid gainsboro;
@@ -210,12 +216,14 @@
     text-align: right;
   }
 
+  // ---------- ---------- ---------- ---------- //
+  // Comments Section
+
   .comments {
     margin-top: 1rem;
     border-top: 2px solid gainsboro;
     li {
       list-style-type: none;
-      padding-left: 1rem;
     }
   }
 
@@ -255,6 +263,49 @@
     }
   }
 
+  .comment-respond {
+    label {
+      display: block;
+      color: $green;
+      font-weight: bold;
+    }
+    textarea {
+      width: 100%;
+    }
+    input {
+      width: 100%;
+    }
+  }
+
+  .comment-form-cookies-consent {
+    input {
+      position: relative;
+      width: 20px;
+      top: -2px;
+    }
+    label {
+      display: inline;
+      padding-left: 0.25rem;
+      font-weight: normal;
+      color: $gray-text;
+    }
+  }
+
+  .submit {
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid $green;
+    background-color: $green;
+    color: white;
+  }
+
+  .submit:hover {
+    background-color: $green-dark;
+  }
+
+  // ---------- ---------- ---------- ---------- //
+  // Posts / Navigation
+
   blockquote {
     border-left: 2px solid gainsboro;
     margin-left: 0;
@@ -289,6 +340,9 @@
     border: 2px solid $coral;
     color: white;
   }
+
+  // ---------- ---------- ---------- ---------- //
+  // Sidebar
 
   .sidebar {
     width: 25%;
@@ -329,6 +383,9 @@
         height: 1.25rem;
         margin: 10px;
       }
+    }
+    button:hover {
+      background-color: $green-dark;
     }
 
     select {
@@ -382,5 +439,67 @@
       line-height: 2rem;
       margin: 0;
     }
+  }
+}
+
+// ---------- ---------- ---------- ---------- //
+// 404 Page
+
+.not-found {
+  width: 600px;
+  margin: auto;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  h1 {
+    color: $green;
+  }
+
+  p {
+    line-height: 1.5rem;
+  }
+
+  form {
+    display: flex;
+  }
+
+  input {
+    height: 2.5rem;
+    width: 300px;
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+    border: 2px solid gainsboro;
+    border-right: none;
+    padding-left: 0.5rem;
+  }
+
+  button {
+    height: 2.5rem;
+    width: 3rem;
+    background-color: $green;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    border: none;
+    padding: 0;
+    img {
+      height: 1.25rem;
+      margin: 10px;
+    }
+  }
+  button:hover {
+    background-color: $green-dark;
+  }
+}
+
+.not-found__container {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+
+  p {
+    margin-bottom: 40px;
   }
 }

@@ -15,4 +15,6 @@
 	</ul>
 	<?php the_comments_pagination(); ?>
 
+	<?php comment_form(); ?>
+
 </div>
