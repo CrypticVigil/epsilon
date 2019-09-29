@@ -108,6 +108,7 @@
 
   main {
     width: calc(75% - 2rem);
+    min-height: 50vh;
     h2 {
       margin: 1rem 0;
       word-wrap: break-word;
@@ -133,6 +134,10 @@
     td {
       padding: 6px 8px;
     }
+  }
+
+  main.full-width-page {
+    width: 100%;
   }
 
   .single-post-h1 {
