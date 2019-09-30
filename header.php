@@ -33,13 +33,11 @@
 	</div>
 
 	<div id="mobile-nav" class="mobile-menu--hidden">
-		<?php
-		wp_nav_menu( array(
+		<?php wp_nav_menu( array(
+			'theme_location' => 'header-nav',
 			'container'				=> 'nav',
 			'container_class'	=> 'mobile-nav__menu',
 			'menu_class'		 	=> 'mobile-nav__menu-ul',
-			'depth'						=> '1'
-			) );
-		?>
+		) ); ?>
 	</div>
 </header>

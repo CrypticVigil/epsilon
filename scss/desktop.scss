@@ -107,10 +107,11 @@
   }
 
   main {
+    margin-top: 1.5rem;
     width: calc(75% - 2rem);
     min-height: 50vh;
     h2 {
-      margin: 1rem 0;
+      margin: 0 0 1rem 0;
       word-wrap: break-word;
     }
     img {
@@ -140,6 +141,13 @@
     width: 100%;
   }
 
+  .post-thumbnail {
+    img {
+      border-radius: 1rem;
+    }
+    margin-bottom: 1rem;
+  }
+
   .single-post-h1 {
     margin-bottom: 0.5rem;
     word-wrap: break-word;
@@ -166,7 +174,7 @@
   .post {
     padding-bottom: 1rem;
     border-bottom: 2px solid gainsboro;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
   }
 
   .single-post .post {
@@ -402,6 +410,10 @@
       padding-left: 1rem;
       border-left: 2px solid gainsboro;
       margin-top: 0;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
     }
   }
 
