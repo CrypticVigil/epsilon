@@ -19,6 +19,36 @@ html {
   color: $gray-text;
 }
 
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.75rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+}
+
+h4 {
+  font-size: 1.25rem;
+  margin: 1rem 0;
+}
+
+h5 {
+  font-size: 1rem;
+}
+
+h6 {
+  font-size: 0.75rem;
+}
+
+p {
+  line-height: 1.5rem;
+}
+
 a {
   text-decoration: none;
   color: $coral;
@@ -41,14 +71,18 @@ a {
   }
 
   .mobile-menu--hidden {
-    display: none;
+    // display: none;
+    transform: translateY(-100%);
   }
 
   .navbar {
+    position: relative;
     height: 60px;
     display: flex;
     justify-content: space-between;
     border-bottom: 2px solid gainsboro;
+    z-index: 10;
+    background-color: white;
   }
 
   .navbar__logo {
@@ -69,6 +103,8 @@ a {
     width: 100%;
     border-bottom: 2px solid gainsboro;
     padding: 10px 1rem;
+    transition: transform 0.625s;
+    z-index: 5;
   }
 
   #mobile-nav ul {
@@ -78,10 +114,6 @@ a {
     display: flex;
     flex-direction: column;
   }
-
-  // #mobile-nav li {
-  //   height: 40px;
-  // }
 
   #mobile-nav a {
     line-height: 40px;
@@ -106,6 +138,7 @@ a {
     height: 100vw;
     display: flex;
     justify-content: center;
+    overflow: hidden;
     img {
       height: 100%;
     }
@@ -115,13 +148,16 @@ a {
   // Main Content Section
 
   .container {
-    padding: 15px;
+    padding: 1.25rem;
   }
 
   main {
     img {
       max-width: 100%;
       height: auto;
+    }
+    h1 {
+      margin: 1rem 0;
     }
     h2 {
       margin: 0.75rem 0;
@@ -139,6 +175,45 @@ a {
       border-radius: 1rem;
     }
     margin-bottom: 0.75rem;
+  }
+
+  .nav-links {
+    display: flex;
+  }
+
+  .page-numbers {
+    border: 2px solid gainsboro;
+    border-right: none;
+    padding: 0.5rem 0.5rem;
+    display: inline-block;
+    text-align: center;
+    flex-grow: 1;
+  }
+
+  .nav-links .prev {
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+  }
+
+  .nav-links .next {
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    border-right: 2px solid gainsboro;
+  }
+
+  .nav-links .current {
+    background-color: $coral;
+    border: 2px solid $coral;
+    color: white;
+  }
+
+  // ---------- ---------- ---------- ---------- //
+  // Posts / Navigation
+
+  blockquote {
+    border-left: 2px solid gainsboro;
+    margin-left: 0;
+    padding-left: 20px;
   }
 
   // ---------- ---------- ---------- ---------- //
@@ -197,6 +272,48 @@ a {
 
     li {
       margin-bottom: 0.5rem;
+    }
+  }
+
+  // ---------- ---------- ---------- ---------- //
+  // Footer
+
+  .page-footer {
+    width: 100%;
+    background-color: $green;
+    color: white;
+    padding: 1.25rem;
+    h3 {
+      margin-top: 0;
+    }
+    section {
+      margin-bottom: 1rem;
+    }
+  }
+
+  .footer-widget {
+    ul {
+      list-style-type: none;
+      padding-left: 1rem;
+      border-left: 2px solid white;
+    }
+    li {
+      margin-bottom: 0.5rem;
+    }
+    a {
+      color: white;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .footer-info {
+    margin-top: 1.5rem;
+    p {
+      text-align: center;
+      line-height: 1.5rem;
+      margin: 0;
     }
   }
 }

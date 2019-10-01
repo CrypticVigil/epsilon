@@ -2,7 +2,7 @@
 
 <div class="container">
 	
-	<main>
+	<main class="single-post__main">
 		<!-- This code checks if there are any posts and displays them -->
 		<?php if( have_posts() ) : while( have_posts() ) : the_post(); ?>
 			<article <?php post_class() ?>>

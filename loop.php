@@ -29,4 +29,7 @@
 	<p><?php esc_html_e( "Sorry, no posts matched your criteria." ); ?></p>
 <?php endif; ?>
 
-<?php the_posts_pagination() ?>
+<?php the_posts_pagination( array(
+	'prev_text' => 'Older',
+	'next_text' => 'Newer'
+) ) ?>
