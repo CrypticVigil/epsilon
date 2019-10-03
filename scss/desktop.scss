@@ -135,6 +135,9 @@
     td {
       padding: 6px 8px;
     }
+    pre {
+      overflow: auto;
+    }
   }
 
   main.full-width-page {
@@ -187,6 +190,7 @@
     font-size: 0.875rem;
     border-top: 2px solid gainsboro;
     padding-top: 0.75rem;
+    clear: both;
   }
 
   .post-tags {
@@ -214,6 +218,7 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 1rem;
+    clear: both;
     h3 {
       margin: 0.5rem 0;
     }
@@ -466,66 +471,66 @@
       margin: 0;
     }
   }
-}
 
-// ---------- ---------- ---------- ---------- //
-// 404 Page
+  // ---------- ---------- ---------- ---------- //
+  // 404 Page
 
-.not-found {
-  width: 600px;
-  margin: auto;
-  min-height: 60vh;
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-
-  h1 {
-    color: $green;
-  }
-
-  p {
-    line-height: 1.5rem;
-  }
-
-  form {
+  .not-found {
+    width: 600px;
+    margin: auto;
+    min-height: 60vh;
     display: flex;
-  }
+    align-items: center;
+    flex-wrap: wrap;
 
-  input {
-    height: 2.5rem;
-    width: 300px;
-    border-top-left-radius: 0.5rem;
-    border-bottom-left-radius: 0.5rem;
-    border: 2px solid gainsboro;
-    border-right: none;
-    padding-left: 0.5rem;
-  }
+    h1 {
+      color: $green;
+    }
 
-  button {
-    height: 2.5rem;
-    width: 3rem;
-    background-color: $green;
-    border-top-right-radius: 0.5rem;
-    border-bottom-right-radius: 0.5rem;
-    border: none;
-    padding: 0;
-    img {
-      height: 1.25rem;
-      margin: 10px;
+    p {
+      line-height: 1.5rem;
+    }
+
+    form {
+      display: flex;
+    }
+
+    input {
+      height: 2.5rem;
+      width: 300px;
+      border-top-left-radius: 0.5rem;
+      border-bottom-left-radius: 0.5rem;
+      border: 2px solid gainsboro;
+      border-right: none;
+      padding-left: 0.5rem;
+    }
+
+    button {
+      height: 2.5rem;
+      width: 3rem;
+      background-color: $green;
+      border-top-right-radius: 0.5rem;
+      border-bottom-right-radius: 0.5rem;
+      border: none;
+      padding: 0;
+      img {
+        height: 1.25rem;
+        margin: 10px;
+      }
+    }
+    button:hover {
+      background-color: $green-dark;
     }
   }
-  button:hover {
-    background-color: $green-dark;
-  }
-}
 
-.not-found__container {
-  display: flex;
-  flex-wrap: wrap;
-  text-align: center;
-  justify-content: center;
+  .not-found__container {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
 
-  p {
-    margin-bottom: 40px;
+    p {
+      margin-bottom: 40px;
+    }
   }
 }
