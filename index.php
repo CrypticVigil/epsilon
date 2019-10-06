@@ -2,11 +2,11 @@
 
 <div class="jumbotron">
 	<div class="jumbotron-text">Embracing life as our beautiful, broken,<br class="mobile-hide"> holy, <br class="desktop-hide"> messy selves.</div>
-	<img 
-		srcset="<?php echo get_bloginfo( 'template_directory' ); ?>/img/jumbotron-flower-sm.jpg 800w,
-						<?php echo get_bloginfo( 'template_directory' ); ?>/img/jumbotron-flower-lg.jpg 2160w"
-		sizes= "100vw"
-		src="<?php echo get_bloginfo( 'template_directory' ); ?>/img/jumbotron-flower-lg.jpg" alt="A flower on a fuzzy green background">
+	<picture>
+		<source srcset="<?php echo get_bloginfo( 'template_directory' ); ?>/img/jumbotron-flower-sm.jpg" media="(max-width: 420px)">
+		<source srcset="<?php echo get_bloginfo( 'template_directory' ); ?>/img/jumbotron-flower-lg.jpg" media="(min-width: 421px)">
+		<img src="<?php echo get_bloginfo( 'template_directory' ); ?>/img/jumbotron-flower-lg.jpg" alt="A flower on a fuzzy green background">
+	</picture>
 </div>
 
 <div class="container">
