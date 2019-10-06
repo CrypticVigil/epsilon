@@ -581,5 +581,15 @@ a {
   }
 }
 
+// ---------- ---------- ---------- ---------- //
+// iPhone 5
+
+@media screen and (max-width: 350px) {
+  .navbar__logo {
+    height: 60px;
+    padding: 8px 0 8px 16px;
+  }
+}
+
 // Desktop Styles
 @import "desktop";
