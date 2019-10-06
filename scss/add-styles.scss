@@ -585,6 +585,10 @@ a {
 // iPhone 5
 
 @media screen and (max-width: 350px) {
+  html {
+    font-size: 15px;
+  }
+
   .navbar__logo {
     height: 60px;
     padding: 8px 0 8px 16px;
