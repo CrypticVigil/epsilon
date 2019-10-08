@@ -6,34 +6,42 @@ $coral-pale: #ffc0b3;
 $warm-gray: #9f8079;
 $pale-gray: #f0f0f0;
 $gray-text: #606060;
-$green: #73bf8c;
-$green-dark: #568f69;
+$green: #84b274;
+$green-dark: #5e8053;
 
 * {
   box-sizing: border-box;
 }
 
 html {
-  font-family: "Nunito", Helvetica, Arial, sans-serif;
+  font-family: "Roboto Slab", Georgia, serif;
   font-size: 16px;
+  font-weight: 300;
   color: $gray-text;
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 2.5rem;
+  font-family: "Caveat";
+  font-weight: normal;
+  margin: 1rem 0;
+  line-height: 2.25rem;
 }
 
 h2 {
   font-size: 1.75rem;
+  font-weight: normal;
 }
 
 h3 {
   font-size: 1.5rem;
+  font-weight: normal;
   margin: 1rem 0;
 }
 
 h4 {
   font-size: 1.25rem;
+  font-weight: normal;
   margin: 1rem 0;
 }
 
@@ -47,6 +55,8 @@ h6 {
 
 p {
   line-height: 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 300;
 }
 
 a {
@@ -157,9 +167,11 @@ a {
     border-bottom: 2px solid white;
     left: 1.25rem;
     padding: 1rem 0;
-    font-size: 1.5rem;
-    font-weight: 300;
-    line-height: 2.25rem;
+    font-size: 2rem;
+    font-weight: normal;
+    line-height: 2.5rem;
+    font-family: "Caveat";
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
   }
 
   .mobile-hide {
@@ -208,7 +220,6 @@ a {
   }
 
   .single-post-h1 {
-    margin-bottom: 0.5rem;
     word-wrap: break-word;
   }
 

@@ -7,9 +7,9 @@
 				<?php the_post_thumbnail( 'large' ) ?>
 			</div>
 		<?php } ?>
-		<h2>
+		<h1>
 			<a href="<?php the_permalink() ?>" title="<?php the_title_attribute() ?>"><?php the_title() ?></a>
-		</h2>
+		</h1>
 		<div>
 			Posted on <a href="<?php the_permalink() ?>">
 				<time datetime="<?php echo get_the_date('c') ?>"><?php echo get_the_date() ?></time></a>
