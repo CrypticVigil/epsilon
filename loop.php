@@ -30,6 +30,6 @@
 <?php endif; ?>
 
 <?php the_posts_pagination( array(
-	'prev_text' => 'Older',
-	'next_text' => 'Newer'
+	'prev_text' => 'Newer',
+	'next_text' => 'Older'
 ) ) ?>
